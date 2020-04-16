@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="jscolor.js"></script>
+    <style>
+      .slidecontainer {
+        width: 80%;
+      }
+      .submitbtn {
+        padding: 20px;
+        background-color: #4caf4c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      .slider {
+        width: 100%;
+      }
+      .container {
+        max-width: 960px;
+        margin: 30px auto;
+        padding: 50px;
+      }
+      .myCanvas {
+        max-width: 960px;
+        margin: auto;
+      }
+      #offset {
+        margin: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="myCanvas">
+      <canvas id="myCanvas" width="846" height="423"></canvas>
+    </div>
+
+    <div>
+      <form action="#">
+        <div class="container">
+          <input class="jscolor" value="ab2567" id="color" name="color" />
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="100"
+              max="250"
+              value="50"
+              class="slider"
+              id="Radius1"
+            />
+            <p>Radius1: <span id="Output1"></span></p>
+          </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="200"
+              value="50"
+              class="slider"
+              id="Radius2"
+            />
+            <p>Radius2: <span id="Output2"></span></p>
+          </div>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="0.0"
+              max="1.0"
+              step="0.05"
+              value="0.5"
+              class="slider"
+              id="factor"
+            />
+            <p>Factor: <span id="factor_value"></span></p>
+          </div>
+          <div>
+            <input type="number" id="offset" value="0" />
+          </div>
+          <button class="submitbtn" type="submit">Play</button>
+          <button class="submitbtn" type="button" id="erase">Erase</button>
+          <div>
+            <a
+              href="#"
+              class="button"
+              id="btn-download"
+              download="my-file-name.png"
+              >Download</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="spirograph.js"></script>
+  </body>
+</html>
